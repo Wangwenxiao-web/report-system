@@ -1,0 +1,39 @@
+<div class="header">
+  <h3>宿舍查看</h3>
+</div>
+<div class="padding24">
+  <nz-table 
+    nzShowSizeChanger 
+    [nzData]="arr" 
+    [nzFrontPagination]="false" 
+    [nzLoading]="loading" 
+    [nzTotal]="total"
+    [nzPageSize]="pageSize" 
+    [nzPageIndex]="pageIndex"
+    (nzQueryParams)="onQueryParamsChange($event)"
+  >
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>学号</th>
+        <th>性别</th>
+        <th>床位号</th>
+        <th>家庭住址</th>
+        <th>宿舍号</th>
+        <th>联系方式</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of arr">
+        <td>{{ data.studentName }}</td>
+        <td>{{ data.studentNo }}</td>
+        <td>{{ data.sex===1?"男":"女" }}</td>
+        <td>{{ data.bedNo }}</td>
+        <td>{{ data.homeAdress }}</td>
+        <td>{{ data.dormitoryNo }}</td>
+        <td>{{ data.message }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>
+

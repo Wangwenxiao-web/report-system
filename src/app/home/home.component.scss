@@ -1,0 +1,72 @@
+.logo {
+  width: 200px;
+  height: 65px;
+  float: left;
+  cursor: pointer;
+  img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+}
+
+.header-menu {
+  line-height: 64px;
+}
+
+.sider-menu {
+  height: 100%;
+  border-right: 0;
+}
+
+.inner-layout {
+  padding: 0px 24px 24px;
+}
+
+.ant-layout-header {
+  padding: 0;
+}
+
+nz-breadcrumb {
+  margin: 16px 0;
+}
+
+nz-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
+}
+
+[nz-icon] {
+  font-size: 30px;
+}
+
+.user{
+  margin-right: 35px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  nz-avatar{
+    margin-bottom: 5px;
+  }
+  a:nth-child(1) {
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    color: #fff;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  a:nth-child(2) {
+    margin-top: 7px;
+  }
+}
+
+nz-footer {
+  text-align: center;
+  height: 20px
+}

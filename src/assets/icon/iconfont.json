@@ -1,0 +1,30 @@
+{
+  "id": "2327756",
+  "name": "慕课网",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2471334",
+      "name": "表单",
+      "font_class": "biaodan",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "998483",
+      "name": "购物车",
+      "font_class": "ai66",
+      "unicode": "e6b8",
+      "unicode_decimal": 59064
+    },
+    {
+      "icon_id": "970725",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+<div class="header">
+    <h3>调换申请</h3>
+</div>
+<div class="padding24">
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm(validateForm.value)">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>学号</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzHasFeedback nzValidatingTip="Validating...">
+            <input nz-input formControlName="stuNo" placeholder="请输入你的学号" />
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>姓名</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="emailErrorTpl">
+            <input nz-input formControlName="stuName" placeholder="请输入你的姓名" />
+            <ng-template #emailErrorTpl let-control>
+              <ng-container *ngIf="control.hasError('required')">
+                请输入你的姓名!
+              </ng-container>
+            </ng-template>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>现居宿舍号</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzHasFeedback nzErrorTip="Please input your password!">
+            <input nz-input formControlName="Now_No" placeholder="请输入公寓号和宿舍号，例如1-101" />
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>意向宿舍号</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="passwordErrorTpl">
+            <input nz-input formControlName="Wish_No" placeholder="请输入公寓号和宿舍号，例如1-101" />
+            <ng-template #passwordErrorTpl let-control>
+              <ng-container *ngIf="control.hasError('required')">
+                Please confirm your password!
+              </ng-container>
+            </ng-template>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>原因</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzErrorTip="Please write something here!">
+            <textarea formControlName="reason" nz-input rows="2" placeholder="请写下调换宿舍的原因"></textarea>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control [nzOffset]="7" [nzSpan]="12">
+            <button nz-button nzType="primary" [disabled]="!validateForm.valid">Submit</button>
+            <button nz-button (click)="resetForm($event)">Reset</button>
+          </nz-form-control>
+        </nz-form-item>
+      </form>
+</div>

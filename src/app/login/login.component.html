@@ -1,0 +1,48 @@
+<div class="backgroud">
+  <img src="../assets/images/2018-05-18 03.55.52 1.jpg" />
+  <div class="login-form">
+    <h3>青岛理工大学自助报道系统</h3>
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+      <span class="form-control-title">账号</span>
+      <nz-form-item >
+        <nz-form-control nzErrorTip="请输入您的学号!">
+          <nz-input-group
+            nzPrefixIcon="user"
+          >
+            <input
+              type="text"
+              nz-input
+              disabled
+              formControlName="userName"
+              placeholder="请输入学号"
+              [(ngModel)]="userName"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <span class="form-control-title">密码</span>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="请输入您的密码!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input
+              type="password"
+              nz-input
+              formControlName="password"
+              placeholder="请输入密码"
+              [(ngModel)]="password"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <button
+        nz-button
+        class="login-form-button login-form-margin"
+        [nzType]="'primary'"
+      >
+        登录
+      </button>
+    </form>
+  </div>
+  <div class="designby"><span>Designed by WWX with Angular @2021</span></div>
+</div>
+  
